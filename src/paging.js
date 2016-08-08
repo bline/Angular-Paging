@@ -448,7 +448,7 @@ angular.module('bw.paging', []).directive('paging', function () {
         }
 
         // Determine the last page or total page count
-        var pageCount = Math.ceil(scope.total / scope.pageSize);
+        var pageCount = Math.floor(scope.total / scope.pageSize);
 
         // Set the default scope values where needed
         setScopeValues(scope, attrs);
